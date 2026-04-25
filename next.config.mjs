@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  async rewrites() {
+    return [
+      {
+        source: '/api/proxy/append',
+        destination: 'http://sovereignlab.cloud/temp/append',
+      },
+    ];
+  },
 };
 
 export default nextConfig;

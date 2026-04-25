@@ -25,7 +25,7 @@ export default function HackathonSubmission() {
     formData.append("image", image);
 
     try {
-      const response = await fetch("http://sovereignlab.cloud/temp/append", {
+      const response = await fetch("/api/proxy/append", {
         method: "POST",
         headers: {
           accept: "application/json",
